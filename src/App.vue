@@ -11,17 +11,21 @@
         <RouterLink to="/about">Schedule</RouterLink>
       </nav>
     </div>
-    <div class="todaysGames">
-      <p>left arrow</p>
-      <p>right arrow</p>
-    </div>
+    <GameHeader/>
   </header>
 
   <RouterView />
 </template>
 
-<script setup lang="ts">
-  import { RouterLink, RouterView } from 'vue-router'
+<script lang="ts">
+  import { RouterLink, RouterView } from 'vue-router';
+  import GameHeader from '@/components/GameHeader/GameHeader.vue';
+
+  export default {
+    components: {
+      GameHeader
+    }
+  }
 </script>
 
 <style scoped>
@@ -48,10 +52,5 @@
   a:hover {
     text-decoration: underline;
     font-weight: bold;
-  }
-  .todaysGames {
-    background-color: #F99806;
-    height: 15vh;
-    border-radius: 0 0 30px 30px;
   }
 </style>
