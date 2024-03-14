@@ -1,29 +1,30 @@
 <template>
   <div class="todaysGames">
       <p>left arrow</p>
-      <p>date</p>
-      <GameHeaderElement v-for="n in 4" :key="n"/>
+      <GameDate/>
+      <GameHeaderElement v-for="n in 5" :key="n"/>
       <p>right arrow</p>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import GameHeaderElement from './GameHeaderElement.vue';
+<script lang="js">
+    import GameHeaderElement from './GameHeaderElement.vue';
+    import GameDate from './GameDate.vue';
     
-    export default defineComponent ({
+    export default {
         name: "GameHeader",
         components: {
-            GameHeaderElement
+            GameHeaderElement,
+            GameDate
         }
-    })
+    }
 </script>
 
 <style scoped>
   .todaysGames {
     display: flex;
     background-color: #F99806;
-    height: 15vh;
+    height: 18vh;
     border-radius: 0 0 30px 30px;
   }
 </style>

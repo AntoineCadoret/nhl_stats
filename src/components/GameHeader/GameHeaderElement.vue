@@ -43,16 +43,17 @@
   
   <style scoped>
     .game {
-        display: flex;
         border-left: solid;
         border-right: solid;
-        padding: 8px;
+        padding: 4px 8px;
+        width: 20vw;
     }
     .status {
         display: flex;
         align-content: center;
         align-self: center;
         height: 2rem;
+        width: 50%;
         padding: 4px 8px;
         border-radius: 10px;
     }
@@ -63,7 +64,6 @@
     #teams{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
     }
     .team {
         display: flex;

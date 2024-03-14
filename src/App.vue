@@ -37,6 +37,7 @@
     background-color: rgb(24, 24, 24);
     width: 100vw;
     justify-content: space-between;
+    padding: 8px;
   }
   nav {
     padding: 2em;
@@ -52,5 +53,9 @@
   a:hover {
     text-decoration: underline;
     font-weight: bold;
+  }
+  img {
+    height: 10vh;
+    width: 8vw;
   }
 </style>
