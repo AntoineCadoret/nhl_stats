@@ -2,7 +2,7 @@
   <div class="todaysGames">
       <p>left arrow</p>
       <p>date</p>
-      <GameHeaderElement/>
+      <GameHeaderElement v-for="n in 4" :key="n"/>
       <p>right arrow</p>
   </div>
 </template>
