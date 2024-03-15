@@ -5,7 +5,7 @@
             <div class="division">
                 <h2>Atlantic</h2>
                 <div class="standing">
-                    <div class="standingElement">
+                    <div class="standingElement first">
                         <div class="team"></div>
                         <div class="score"></div>
                     </div>
@@ -13,7 +13,7 @@
                         <div class="team"></div>
                         <div class="score"></div>
                     </div>
-                    <div class="standingElement">
+                    <div class="standingElement last">
                         <div class="team"></div>
                         <div class="score"></div>
                     </div>
@@ -22,7 +22,7 @@
             <div class="division">
                 <h2>Metropolitan</h2>
                 <div class="standing">
-                    <div class="standingElement">
+                    <div class="standingElement first">
                         <div class="team"></div>
                         <div class="score"></div>
                     </div>
@@ -30,7 +30,7 @@
                         <div class="team"></div>
                         <div class="score"></div>
                     </div>
-                    <div class="standingElement">
+                    <div class="standingElement last">
                         <div class="team"></div>
                         <div class="score"></div>
                     </div>
@@ -41,7 +41,7 @@
             <div class="division">
                 <h2>Central</h2>
                 <div class="standing">
-                    <div class="standingElement">
+                    <div class="standingElement first">
                         <div class="team"></div>
                         <div class="score"></div>
                     </div>
@@ -49,7 +49,7 @@
                         <div class="team"></div>
                         <div class="score"></div>
                     </div>
-                    <div class="standingElement">
+                    <div class="standingElement last">
                         <div class="team"></div>
                         <div class="score"></div>
                     </div>
@@ -58,17 +58,17 @@
             <div class="division">
                 <h2>Pacific</h2>
                 <div class="standing">
-                    <div class="standingElement">
+                    <div class="standingElement first">
                         <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="score">100</div>
                     </div>
                     <div class="standingElement">
                         <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="score">100</div>
                     </div>
-                    <div class="standingElement">
+                    <div class="standingElement last">
                         <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="score">100</div>
                     </div>
                 </div>
             </div>
@@ -101,5 +101,20 @@
         width: 35vw;
         height: 18vh;
         border-radius: 15px;
+    }
+    .standingElement {
+        height: 6vh;
+    }
+    .first {
+        border-bottom: solid;
+    }
+    .last {
+        border-top: solid;
+    } 
+    .score {
+        float: right;
+        width: 10vw;
+        height:100%;
+        border-left: solid;
     }
 </style>
