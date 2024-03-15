@@ -31,6 +31,7 @@
 <style scoped>
   header{
     width: 100vw;
+    margin-bottom: 10px;
   }
   .wrapper{
     display: flex;
