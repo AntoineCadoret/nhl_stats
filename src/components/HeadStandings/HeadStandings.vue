@@ -6,16 +6,28 @@
                 <h2>Atlantic</h2>
                 <div class="standing">
                     <div class="standingElement first">
-                        <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="team">
+                            <p>1.</p>
+                            <img :src="montrealLogo" alt="canadiens">
+                            <p class="teamName">Montreal</p>
+                        </div>
+                        <div class="score">130</div>
                     </div>
                     <div class="standingElement">
-                        <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="team">
+                            <p>2.</p>
+                            <img :src="detroitLogo" alt="detroit">
+                            <p class="teamName">Detroit</p>
+                        </div>
+                        <div class="score">115</div>
                     </div>
                     <div class="standingElement last">
-                        <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="team">
+                            <p>3.</p>
+                            <img :src="bostonLogo" alt="boston">
+                            <p class="teamName">Boston</p>
+                        </div>
+                        <div class="score">100</div>
                     </div>
                 </div>
             </div>
@@ -23,16 +35,28 @@
                 <h2>Metropolitan</h2>
                 <div class="standing">
                     <div class="standingElement first">
-                        <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="team">
+                            <p>1.</p>
+                            <img :src="montrealLogo" alt="canadiens">
+                            <p class="teamName">Montreal</p>
+                        </div>
+                        <div class="score">130</div>
                     </div>
                     <div class="standingElement">
-                        <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="team">
+                            <p>2.</p>
+                            <img :src="detroitLogo" alt="detroit">
+                            <p class="teamName">Detroit</p>
+                        </div>
+                        <div class="score">115</div>
                     </div>
                     <div class="standingElement last">
-                        <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="team">
+                            <p>3.</p>
+                            <img :src="bostonLogo" alt="boston">
+                            <p class="teamName">Boston</p>
+                        </div>
+                        <div class="score">100</div>
                     </div>
                 </div>
             </div>
@@ -42,16 +66,28 @@
                 <h2>Central</h2>
                 <div class="standing">
                     <div class="standingElement first">
-                        <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="team">
+                            <p>1.</p>
+                            <img :src="montrealLogo" alt="canadiens">
+                            <p class="teamName">Montreal</p>
+                        </div>
+                        <div class="score">130</div>
                     </div>
                     <div class="standingElement">
-                        <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="team">
+                            <p>2.</p>
+                            <img :src="detroitLogo" alt="detroit">
+                            <p class="teamName">Detroit</p>
+                        </div>
+                        <div class="score">115</div>
                     </div>
                     <div class="standingElement last">
-                        <div class="team"></div>
-                        <div class="score"></div>
+                        <div class="team">
+                            <p>3.</p>
+                            <img :src="bostonLogo" alt="boston">
+                            <p class="teamName">Boston</p>
+                        </div>
+                        <div class="score">100</div>
                     </div>
                 </div>
             </div>
@@ -59,15 +95,27 @@
                 <h2>Pacific</h2>
                 <div class="standing">
                     <div class="standingElement first">
-                        <div class="team"></div>
-                        <div class="score">100</div>
+                        <div class="team">
+                            <p>1.</p>
+                            <img :src="montrealLogo" alt="canadiens">
+                            <p class="teamName">Montreal</p>
+                        </div>
+                        <div class="score">130</div>
                     </div>
                     <div class="standingElement">
-                        <div class="team"></div>
-                        <div class="score">100</div>
+                        <div class="team">
+                            <p>2.</p>
+                            <img :src="detroitLogo" alt="detroit">
+                            <p class="teamName">Detroit</p>
+                        </div>
+                        <div class="score">115</div>
                     </div>
                     <div class="standingElement last">
-                        <div class="team"></div>
+                        <div class="team">
+                            <p>3.</p>
+                            <img :src="bostonLogo" alt="boston">
+                            <p class="teamName">Boston</p>
+                        </div>
                         <div class="score">100</div>
                     </div>
                 </div>
@@ -79,8 +127,18 @@
 </template>
 
 <script lang="ts">
+    import montrealLogo from '@/assets/montreal-canadiens-logo.png';
+    import detroitLogo from '@/assets/detroit-red-wings-logo.png';
+    import bostonLogo from '@/assets/boston-bruins-logo.png';
     export default {
-        name: 'HeadStandings'
+        name: 'HeadStandings',
+        data() {
+            return {
+                montrealLogo,
+                detroitLogo,
+                bostonLogo
+            }
+        }
     }
 </script>
 
@@ -95,6 +153,7 @@
     }
     .division {
         text-align: center;
+        margin-top: 20px;
     }
     .standing {
         background-color: #F99806;
@@ -103,6 +162,8 @@
         border-radius: 15px;
     }
     .standingElement {
+        display: flex;
+        justify-content: space-between;
         height: 6vh;
     }
     .first {
@@ -111,8 +172,21 @@
     .last {
         border-top: solid;
     } 
+    .team {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .team p {
+        margin: 20px;
+    }
+    .team img {
+        height: 4vh;
+    }
     .score {
-        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 10vw;
         height:100%;
         border-left: solid;
