@@ -5,16 +5,20 @@
     <div class="wrapper">
      <RouterLink to="/"><img alt="NHL logo" class="logo" src="@/assets/nhl-logo.png" width="125" height="125" /></RouterLink>
       <nav>
-        <RouterLink to="/about">Pool</RouterLink>
-        <RouterLink to="/about">Standings</RouterLink>
-        <RouterLink to="/about">Stats</RouterLink>
-        <RouterLink to="/about">Schedule</RouterLink>
+        <RouterLink to="/schedule">Pool</RouterLink>
+        <RouterLink to="/schedule">schedule</RouterLink>
+        <RouterLink to="/schedule">Stats</RouterLink>
+        <RouterLink to="/schedule">Stanings</RouterLink>
       </nav>
     </div>
     <GameHeader/>
   </header>
 
   <RouterView />
+
+  <footer>
+    <p>@NHLStats</p>
+  </footer>
 </template>
 
 <script lang="ts">
@@ -58,5 +62,12 @@
   img {
     height: 10vh;
     width: 8vw;
+  }
+  footer {
+    background-color : rgb(24, 24, 24);
+    color : rgb(194, 192, 192);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
   }
 </style>
